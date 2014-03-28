@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A018E503E800E2BA7B /* OutListTableViewController.m */; };
+		3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */; };
+		3EA717A718E5097C00E2BA7B /* AddRestarauntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A618E5097C00E2BA7B /* AddRestarauntViewController.m */; };
+		3EA717AA18E5098B00E2BA7B /* AddDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A918E5098B00E2BA7B /* AddDishViewController.m */; };
+		3ED7187818DA8E2500EA58B2 /* InFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */; };
+		3ED7187B18DA8E8000EA58B2 /* InListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7187A18DA8E8000EA58B2 /* InListTableViewController.m */; };
 		3EF6F23618DA87A2007BC0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF6F23518DA87A2007BC0C9 /* Foundation.framework */; };
 		3EF6F23818DA87A2007BC0C9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF6F23718DA87A2007BC0C9 /* CoreGraphics.framework */; };
 		3EF6F23A18DA87A2007BC0C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF6F23918DA87A2007BC0C9 /* UIKit.framework */; };
@@ -22,6 +28,9 @@
 		3EF6F25A18DA87A2007BC0C9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF6F23918DA87A2007BC0C9 /* UIKit.framework */; };
 		3EF6F26218DA87A2007BC0C9 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 3EF6F26018DA87A2007BC0C9 /* InfoPlist.strings */; };
 		3EF6F26418DA87A2007BC0C9 /* WhatToEat2Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF6F26318DA87A2007BC0C9 /* WhatToEat2Tests.m */; };
+		3EF6F26F18DA88A7007BC0C9 /* InOrOutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF6F26E18DA88A7007BC0C9 /* InOrOutViewController.m */; };
+		3EF6F27218DA88FD007BC0C9 /* InFoodTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF6F27118DA88FD007BC0C9 /* InFoodTypeViewController.m */; };
+		3EF6F27518DA8A59007BC0C9 /* OutFoodTypeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EF6F27418DA8A59007BC0C9 /* OutFoodTypeViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +44,18 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3EA7179F18E503E800E2BA7B /* OutListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutListTableViewController.h; sourceTree = "<group>"; };
+		3EA717A018E503E800E2BA7B /* OutListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutListTableViewController.m; sourceTree = "<group>"; };
+		3EA717A218E5049D00E2BA7B /* OutFoodItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutFoodItemViewController.h; sourceTree = "<group>"; };
+		3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutFoodItemViewController.m; sourceTree = "<group>"; };
+		3EA717A518E5097C00E2BA7B /* AddRestarauntViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRestarauntViewController.h; sourceTree = "<group>"; };
+		3EA717A618E5097C00E2BA7B /* AddRestarauntViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRestarauntViewController.m; sourceTree = "<group>"; };
+		3EA717A818E5098B00E2BA7B /* AddDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDishViewController.h; sourceTree = "<group>"; };
+		3EA717A918E5098B00E2BA7B /* AddDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDishViewController.m; sourceTree = "<group>"; };
+		3ED7187618DA8E2500EA58B2 /* InFoodItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InFoodItemViewController.h; sourceTree = "<group>"; };
+		3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InFoodItemViewController.m; sourceTree = "<group>"; };
+		3ED7187918DA8E8000EA58B2 /* InListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InListTableViewController.h; sourceTree = "<group>"; };
+		3ED7187A18DA8E8000EA58B2 /* InListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InListTableViewController.m; sourceTree = "<group>"; };
 		3EF6F23218DA87A2007BC0C9 /* WhatToEat2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhatToEat2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3EF6F23518DA87A2007BC0C9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		3EF6F23718DA87A2007BC0C9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -55,6 +76,12 @@
 		3EF6F25F18DA87A2007BC0C9 /* WhatToEat2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "WhatToEat2Tests-Info.plist"; sourceTree = "<group>"; };
 		3EF6F26118DA87A2007BC0C9 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		3EF6F26318DA87A2007BC0C9 /* WhatToEat2Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WhatToEat2Tests.m; sourceTree = "<group>"; };
+		3EF6F26D18DA88A7007BC0C9 /* InOrOutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InOrOutViewController.h; sourceTree = "<group>"; };
+		3EF6F26E18DA88A7007BC0C9 /* InOrOutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InOrOutViewController.m; sourceTree = "<group>"; };
+		3EF6F27018DA88FD007BC0C9 /* InFoodTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InFoodTypeViewController.h; sourceTree = "<group>"; };
+		3EF6F27118DA88FD007BC0C9 /* InFoodTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InFoodTypeViewController.m; sourceTree = "<group>"; };
+		3EF6F27318DA8A59007BC0C9 /* OutFoodTypeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutFoodTypeViewController.h; sourceTree = "<group>"; };
+		3EF6F27418DA8A59007BC0C9 /* OutFoodTypeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutFoodTypeViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,9 +146,27 @@
 				3EF6F24718DA87A2007BC0C9 /* Main_iPhone.storyboard */,
 				3EF6F24A18DA87A2007BC0C9 /* Main_iPad.storyboard */,
 				3EF6F24D18DA87A2007BC0C9 /* ViewController.h */,
+				3EA717A218E5049D00E2BA7B /* OutFoodItemViewController.h */,
+				3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */,
+				3EA717A518E5097C00E2BA7B /* AddRestarauntViewController.h */,
+				3EA717A618E5097C00E2BA7B /* AddRestarauntViewController.m */,
+				3EA717A818E5098B00E2BA7B /* AddDishViewController.h */,
+				3EA717A918E5098B00E2BA7B /* AddDishViewController.m */,
 				3EF6F24E18DA87A2007BC0C9 /* ViewController.m */,
 				3EF6F25018DA87A2007BC0C9 /* Images.xcassets */,
 				3EF6F23C18DA87A2007BC0C9 /* Supporting Files */,
+				3EF6F26D18DA88A7007BC0C9 /* InOrOutViewController.h */,
+				3EF6F26E18DA88A7007BC0C9 /* InOrOutViewController.m */,
+				3EF6F27018DA88FD007BC0C9 /* InFoodTypeViewController.h */,
+				3EA7179F18E503E800E2BA7B /* OutListTableViewController.h */,
+				3EA717A018E503E800E2BA7B /* OutListTableViewController.m */,
+				3EF6F27118DA88FD007BC0C9 /* InFoodTypeViewController.m */,
+				3EF6F27318DA8A59007BC0C9 /* OutFoodTypeViewController.h */,
+				3EF6F27418DA8A59007BC0C9 /* OutFoodTypeViewController.m */,
+				3ED7187618DA8E2500EA58B2 /* InFoodItemViewController.h */,
+				3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */,
+				3ED7187918DA8E8000EA58B2 /* InListTableViewController.h */,
+				3ED7187A18DA8E8000EA58B2 /* InListTableViewController.m */,
 			);
 			path = WhatToEat2;
 			sourceTree = "<group>";
@@ -253,8 +298,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3ED7187B18DA8E8000EA58B2 /* InListTableViewController.m in Sources */,
 				3EF6F24F18DA87A2007BC0C9 /* ViewController.m in Sources */,
+				3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */,
+				3EF6F26F18DA88A7007BC0C9 /* InOrOutViewController.m in Sources */,
 				3EF6F24618DA87A2007BC0C9 /* AppDelegate.m in Sources */,
+				3EF6F27518DA8A59007BC0C9 /* OutFoodTypeViewController.m in Sources */,
+				3ED7187818DA8E2500EA58B2 /* InFoodItemViewController.m in Sources */,
+				3EA717A718E5097C00E2BA7B /* AddRestarauntViewController.m in Sources */,
+				3EF6F27218DA88FD007BC0C9 /* InFoodTypeViewController.m in Sources */,
+				3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */,
+				3EA717AA18E5098B00E2BA7B /* AddDishViewController.m in Sources */,
 				3EF6F24218DA87A2007BC0C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -470,6 +524,7 @@
 				3EF6F26918DA87A2007BC0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		3EF6F26A18DA87A2007BC0C9 /* Build configuration list for PBXNativeTarget "WhatToEat2Tests" */ = {
 			isa = XCConfigurationList;
@@ -478,6 +533,7 @@
 				3EF6F26C18DA87A2007BC0C9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
