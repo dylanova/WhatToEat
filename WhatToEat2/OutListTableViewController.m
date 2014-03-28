@@ -7,7 +7,7 @@
 //
 
 #import "OutListTableViewController.h"
-#import "AddRestarauntViewController.h"
+#import "AddRestaurantViewController.h"
 
 @interface OutListTableViewController ()
 
@@ -17,7 +17,7 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
-    AddRestarauntViewController *source = [segue sourceViewController];
+    AddRestaurantViewController *source = [segue sourceViewController];
     
 }
 

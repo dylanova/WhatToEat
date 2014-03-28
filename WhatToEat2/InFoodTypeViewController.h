@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface InFoodTypeViewController : UIViewController
+    <UIPickerViewDelegate, UIPickerViewDataSource>
+
+@property (strong, nonatomic) NSArray *dishTypesArray;
 
 @end

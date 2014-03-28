@@ -1,26 +1,26 @@
 //
-//  AddRestarauntViewController.m
+//  AddRestaurantViewController.m
 //  WhatToEat2
 //
 //  Created by Dylan Porter on 3/27/14.
 //  Copyright (c) 2014 Dylan Porter. All rights reserved.
 //
 
-#import "AddRestarauntViewController.h"
+#import "AddRestaurantViewController.h"
 
-@interface AddRestarauntViewController ()
+@interface AddRestaurantViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-@property (weak, nonatomic) IBOutlet UITextField *restarauntText;
+@property (weak, nonatomic) IBOutlet UITextField *restaurantText;
 @end
 
-@implementation AddRestarauntViewController
+@implementation AddRestaurantViewController
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if( sender != self.doneButton) return;
     
-    if(self.restarauntText.text.length > 0){
+    if(self.restaurantText.text.length > 0){
         return;
     }
 }

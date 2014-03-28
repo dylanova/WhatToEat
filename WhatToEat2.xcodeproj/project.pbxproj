@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A018E503E800E2BA7B /* OutListTableViewController.m */; };
 		3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */; };
-		3EA717A718E5097C00E2BA7B /* AddRestarauntViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A618E5097C00E2BA7B /* AddRestarauntViewController.m */; };
+		3EA717A718E5097C00E2BA7B /* AddRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A618E5097C00E2BA7B /* AddRestaurantViewController.m */; };
 		3EA717AA18E5098B00E2BA7B /* AddDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A918E5098B00E2BA7B /* AddDishViewController.m */; };
 		3ED7187818DA8E2500EA58B2 /* InFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */; };
 		3ED7187B18DA8E8000EA58B2 /* InListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7187A18DA8E8000EA58B2 /* InListTableViewController.m */; };
@@ -48,8 +48,8 @@
 		3EA717A018E503E800E2BA7B /* OutListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutListTableViewController.m; sourceTree = "<group>"; };
 		3EA717A218E5049D00E2BA7B /* OutFoodItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutFoodItemViewController.h; sourceTree = "<group>"; };
 		3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutFoodItemViewController.m; sourceTree = "<group>"; };
-		3EA717A518E5097C00E2BA7B /* AddRestarauntViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRestarauntViewController.h; sourceTree = "<group>"; };
-		3EA717A618E5097C00E2BA7B /* AddRestarauntViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRestarauntViewController.m; sourceTree = "<group>"; };
+		3EA717A518E5097C00E2BA7B /* AddRestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddRestaurantViewController.h; sourceTree = "<group>"; };
+		3EA717A618E5097C00E2BA7B /* AddRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRestaurantViewController.m; sourceTree = "<group>"; };
 		3EA717A818E5098B00E2BA7B /* AddDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDishViewController.h; sourceTree = "<group>"; };
 		3EA717A918E5098B00E2BA7B /* AddDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDishViewController.m; sourceTree = "<group>"; };
 		3ED7187618DA8E2500EA58B2 /* InFoodItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InFoodItemViewController.h; sourceTree = "<group>"; };
@@ -148,8 +148,8 @@
 				3EF6F24D18DA87A2007BC0C9 /* ViewController.h */,
 				3EA717A218E5049D00E2BA7B /* OutFoodItemViewController.h */,
 				3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */,
-				3EA717A518E5097C00E2BA7B /* AddRestarauntViewController.h */,
-				3EA717A618E5097C00E2BA7B /* AddRestarauntViewController.m */,
+				3EA717A518E5097C00E2BA7B /* AddRestaurantViewController.h */,
+				3EA717A618E5097C00E2BA7B /* AddRestaurantViewController.m */,
 				3EA717A818E5098B00E2BA7B /* AddDishViewController.h */,
 				3EA717A918E5098B00E2BA7B /* AddDishViewController.m */,
 				3EF6F24E18DA87A2007BC0C9 /* ViewController.m */,
@@ -305,7 +305,7 @@
 				3EF6F24618DA87A2007BC0C9 /* AppDelegate.m in Sources */,
 				3EF6F27518DA8A59007BC0C9 /* OutFoodTypeViewController.m in Sources */,
 				3ED7187818DA8E2500EA58B2 /* InFoodItemViewController.m in Sources */,
-				3EA717A718E5097C00E2BA7B /* AddRestarauntViewController.m in Sources */,
+				3EA717A718E5097C00E2BA7B /* AddRestaurantViewController.m in Sources */,
 				3EF6F27218DA88FD007BC0C9 /* InFoodTypeViewController.m in Sources */,
 				3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */,
 				3EA717AA18E5098B00E2BA7B /* AddDishViewController.m in Sources */,

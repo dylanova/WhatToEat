@@ -1,5 +1,5 @@
 //
-//  AddRestarauntViewController.h
+//  AddRestaurantViewController.h
 //  WhatToEat2
 //
 //  Created by Dylan Porter on 3/27/14.
@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface AddRestarauntViewController : UIViewController
+@interface AddRestaurantViewController : UIViewController
 
 @end
