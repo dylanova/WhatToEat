@@ -152,10 +152,10 @@
             </objects>
             <point key="canvasLocation" x="2240" y="875"/>
         </scene>
-        <!--View Controller - Add Restaraunt-->
+        <!--Add Restaraunt View Controller - Add Restaraunt-->
         <scene sceneID="Ume-Dz-OEp">
             <objects>
-                <viewController id="qh4-bZ-cgO" sceneMemberID="viewController">
+                <viewController id="qh4-bZ-cgO" customClass="AddRestarauntViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="rng-5A-kMR"/>
                         <viewControllerLayoutGuide type="bottom" id="FBN-PJ-iOe"/>
@@ -174,11 +174,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Restaraunt" id="SHv-wW-I5O">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9m2-Zk-YTf"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="aiX-0t-hO9"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="9m2-Zk-YTf">
+                            <connections>
+                                <segue destination="ACO-rS-wMh" kind="unwind" unwindAction="unwindToList:" id="eMQ-mV-dIH"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="aiX-0t-hO9">
+                            <connections>
+                                <segue destination="ACO-rS-wMh" kind="unwind" unwindAction="unwindToList:" id="iBB-PC-bh0"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="9m2-Zk-YTf" id="4Y2-wj-CR1"/>
+                        <outlet property="doneButton" destination="aiX-0t-hO9" id="BW9-Fa-VgN"/>
+                        <outlet property="restarauntText" destination="JYj-RP-dvG" id="Vhg-PE-efV"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPK-lr-8iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="ACO-rS-wMh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3310" y="875"/>
         </scene>
@@ -262,10 +276,10 @@
             </objects>
             <point key="canvasLocation" x="774" y="1644"/>
         </scene>
-        <!--View Controller - Add Dish-->
+        <!--Add Dish View Controller - Add Dish-->
         <scene sceneID="Pbt-kw-6qp">
             <objects>
-                <viewController id="NWw-3S-Qe0" sceneMemberID="viewController">
+                <viewController id="NWw-3S-Qe0" customClass="AddDishViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="r4A-AV-AgE"/>
                         <viewControllerLayoutGuide type="bottom" id="v0a-G1-7B4"/>
@@ -284,11 +298,25 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Add Dish" id="90Q-V8-Dau">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wPA-BJ-I7h"/>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ga6-bn-8Ql"/>
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="wPA-BJ-I7h">
+                            <connections>
+                                <segue destination="sSI-fZ-DpF" kind="unwind" unwindAction="unwindToList:" id="1dO-U0-rjC"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="ga6-bn-8Ql">
+                            <connections>
+                                <segue destination="sSI-fZ-DpF" kind="unwind" unwindAction="unwindToList:" id="0Tu-Ed-6iN"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="wPA-BJ-I7h" id="obR-pu-phD"/>
+                        <outlet property="dishText" destination="1jn-lF-snm" id="HGs-J6-WNs"/>
+                        <outlet property="doneButton" destination="ga6-bn-8Ql" id="QKd-Ob-htj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePJ-2f-zeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="sSI-fZ-DpF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="1902" y="1644"/>
         </scene>

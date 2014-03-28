@@ -10,4 +10,6 @@
 
 @interface InListTableViewController : UITableViewController
 
+- (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
 @end
