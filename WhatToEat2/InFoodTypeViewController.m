@@ -26,9 +26,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _dishTypesArray = @[@"All", @"Mexican", @"Italian", @"American", @"Seafood"];
-    /*salad, healthy, chicken, pork, beef*/
-
+    _dishTypesArray = @[@"All",
+                        @"Mexican",
+                        @"Italian",
+                        @"American",
+                        @"Seafood",
+                        @"Salad",
+                        @"Healthy",
+                        @"Chicken",
+                        @"Pork",
+                        @"Beef",
+                        @"Asian",
+                        @"Breakfast"];
 }
 
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView

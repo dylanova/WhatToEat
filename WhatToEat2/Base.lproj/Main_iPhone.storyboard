@@ -106,10 +106,10 @@
             </objects>
             <point key="canvasLocation" x="1376" y="3"/>
         </scene>
-        <!--In Food Item View Controller - Random Restaurant-->
+        <!--Out Food Item View Controller - Random Restaurant-->
         <scene sceneID="xGb-Fd-JQi">
             <objects>
-                <viewController id="NBO-7M-FT9" customClass="InFoodItemViewController" sceneMemberID="viewController">
+                <viewController id="NBO-7M-FT9" customClass="OutFoodItemViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="YqA-3x-pHO"/>
                         <viewControllerLayoutGuide type="bottom" id="FRm-Rd-3oe"/>
@@ -117,9 +117,21 @@
                     <view key="view" contentMode="scaleToFill" id="y8K-be-Lkq">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jJW-Z5-st3">
+                                <rect key="frame" x="20" y="102" width="280" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Random Restaurant" id="Ssh-sG-frF"/>
+                    <connections>
+                        <outlet property="filterLabel" destination="jJW-Z5-st3" id="Bg8-L7-csf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXQ-Rd-B7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -347,9 +359,20 @@
                     <view key="view" contentMode="scaleToFill" id="FEr-qm-mPC">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Filter" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GkJ-zy-gV4">
+                                <rect key="frame" x="20" y="87" width="280" height="36"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" title="Random Dish" id="5wS-9Z-2im"/>
+                    <connections>
+                        <outlet property="filterLabel" destination="GkJ-zy-gV4" id="V3b-yr-K13"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDR-2K-7VJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -376,7 +399,6 @@
         <!--Navigation Controller-->
         <scene sceneID="AfL-hT-3cT">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9yt-Qt-Gyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="GMU-Sp-FtX" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3hz-mg-sOv">
@@ -388,6 +410,7 @@
                         <segue destination="qh4-bZ-cgO" kind="relationship" relationship="rootViewController" id="J1L-Lp-9Ub"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9yt-Qt-Gyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2768" y="875"/>
         </scene>

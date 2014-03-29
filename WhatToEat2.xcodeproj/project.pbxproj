@@ -11,6 +11,7 @@
 		3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */; };
 		3EA717A718E5097C00E2BA7B /* AddRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A618E5097C00E2BA7B /* AddRestaurantViewController.m */; };
 		3EA717AA18E5098B00E2BA7B /* AddDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A918E5098B00E2BA7B /* AddDishViewController.m */; };
+		3EBD1F6C18E74512005ABC8C /* SharedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EBD1F6B18E74512005ABC8C /* SharedManager.m */; };
 		3ED7187818DA8E2500EA58B2 /* InFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */; };
 		3ED7187B18DA8E8000EA58B2 /* InListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3ED7187A18DA8E8000EA58B2 /* InListTableViewController.m */; };
 		3EF6F23618DA87A2007BC0C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EF6F23518DA87A2007BC0C9 /* Foundation.framework */; };
@@ -52,6 +53,8 @@
 		3EA717A618E5097C00E2BA7B /* AddRestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddRestaurantViewController.m; sourceTree = "<group>"; };
 		3EA717A818E5098B00E2BA7B /* AddDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDishViewController.h; sourceTree = "<group>"; };
 		3EA717A918E5098B00E2BA7B /* AddDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDishViewController.m; sourceTree = "<group>"; };
+		3EBD1F6A18E74512005ABC8C /* SharedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SharedManager.h; sourceTree = "<group>"; };
+		3EBD1F6B18E74512005ABC8C /* SharedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SharedManager.m; sourceTree = "<group>"; };
 		3ED7187618DA8E2500EA58B2 /* InFoodItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InFoodItemViewController.h; sourceTree = "<group>"; };
 		3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InFoodItemViewController.m; sourceTree = "<group>"; };
 		3ED7187918DA8E8000EA58B2 /* InListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InListTableViewController.h; sourceTree = "<group>"; };
@@ -163,6 +166,8 @@
 				3EF6F27118DA88FD007BC0C9 /* InFoodTypeViewController.m */,
 				3EF6F27318DA8A59007BC0C9 /* OutFoodTypeViewController.h */,
 				3EF6F27418DA8A59007BC0C9 /* OutFoodTypeViewController.m */,
+				3EBD1F6A18E74512005ABC8C /* SharedManager.h */,
+				3EBD1F6B18E74512005ABC8C /* SharedManager.m */,
 				3ED7187618DA8E2500EA58B2 /* InFoodItemViewController.h */,
 				3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */,
 				3ED7187918DA8E8000EA58B2 /* InListTableViewController.h */,
@@ -305,6 +310,7 @@
 				3EF6F24618DA87A2007BC0C9 /* AppDelegate.m in Sources */,
 				3EF6F27518DA8A59007BC0C9 /* OutFoodTypeViewController.m in Sources */,
 				3ED7187818DA8E2500EA58B2 /* InFoodItemViewController.m in Sources */,
+				3EBD1F6C18E74512005ABC8C /* SharedManager.m in Sources */,
 				3EA717A718E5097C00E2BA7B /* AddRestaurantViewController.m in Sources */,
 				3EF6F27218DA88FD007BC0C9 /* InFoodTypeViewController.m in Sources */,
 				3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */,

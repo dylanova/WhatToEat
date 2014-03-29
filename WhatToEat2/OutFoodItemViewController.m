@@ -7,8 +7,11 @@
 //
 
 #import "OutFoodItemViewController.h"
+#import "SharedManager.h"
 
 @interface OutFoodItemViewController ()
+
+@property (weak, nonatomic) IBOutlet UILabel *filterLabel;
 
 @end
 
@@ -26,7 +29,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    self.filterLabel.text = sharedManager.restaurantFilter;
 }
 
 - (void)didReceiveMemoryWarning

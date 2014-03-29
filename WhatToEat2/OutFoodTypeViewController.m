@@ -26,7 +26,18 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _restaurantTypesArray = @[@"All", @"Mexican", @"Italian", @"American", @"Seafood"];
+    _restaurantTypesArray = @[@"All",
+                              @"Mexican",
+                              @"Italian",
+                              @"American",
+                              @"Seafood",
+                              @"Salad",
+                              @"Healthy",
+                              @"Chicken",
+                              @"Pork",
+                              @"Beef",
+                              @"Asian",
+                              @"Breakfast"];
 }
 
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
