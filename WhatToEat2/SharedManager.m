@@ -7,11 +7,15 @@
 //
 
 #import "SharedManager.h"
+#import "Dish.h"
+#import "Restaurant.h"
 
 @implementation SharedManager
 
 @synthesize dishFilter;
+@synthesize dishArray;
 @synthesize restaurantFilter;
+@synthesize restaurantArray;
 
 #pragma mark Singleton Methods
 
@@ -27,7 +31,16 @@
 - (id)init {
     if (self = [super init]) {
         dishFilter = @"Default Dish";
+        Dish *tmpDish = [[Dish alloc] init];
+        tmpDish.name = @"Spaghetti";
+        tmpDish.types = NULL;
+        tmpDish.ingredients = NULL;
+        [dishArray addObject:tmpDish];
+        
         restaurantFilter = @"Default Restaurant";
+        Restaurant *tmpRestaurant = [[Restaurant alloc] init];
+        [restaurantArray addObject:tmpRestaurant];
+
     }
     return self;
 }

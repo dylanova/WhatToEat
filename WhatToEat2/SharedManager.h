@@ -11,11 +11,15 @@
 @interface SharedManager : NSObject {
 
     NSString *dishFilter;
+    NSMutableArray  *dishArray;
     NSString *restaurantFilter;
+    NSMutableArray  *restaurantArray;
 }
 
 @property (nonatomic, retain) NSString *dishFilter;
+@property (nonatomic, retain) NSMutableArray *dishArray;
 @property (nonatomic, retain) NSString *restaurantFilter;
+@property (nonatomic, retain) NSMutableArray *restaurantArray;
 
 + (id)sharedManager;
 

@@ -7,6 +7,7 @@
 //
 
 #import "InFoodTypeViewController.h"
+#import "SharedManager.h"
 
 @interface InFoodTypeViewController ()
 
@@ -52,6 +53,7 @@
 
 - (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
+
     return _dishTypesArray[row];
 }
 
@@ -60,6 +62,8 @@
 -(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
       inComponent:(NSInteger)component
 {
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    sharedManager.dishFilter = _dishTypesArray[row];
     return;
 }
 
