@@ -14,8 +14,10 @@
 
 @synthesize dishFilter;
 @synthesize dishArray;
+@synthesize selectedDish;
 @synthesize restaurantFilter;
 @synthesize restaurantArray;
+@synthesize selectedRestaurant;
 
 #pragma mark Singleton Methods
 
@@ -31,10 +33,13 @@
 - (id)init {
     if (self = [super init]) {
         dishFilter = @"Default Dish";
+        
         dishArray = [[NSMutableArray alloc] init];
         Dish *tmpDish = [[Dish alloc] init];
         tmpDish.name = @"Spaghetti";
         [dishArray addObject:tmpDish];
+        
+        selectedDish = [[Dish alloc] init];
         
         restaurantFilter = @"Default Restaurant";
         restaurantArray = [[NSMutableArray alloc] init];
@@ -42,6 +47,7 @@
         tmpRestaurant.name = @"Chuy's";
         [restaurantArray addObject:tmpRestaurant];
 
+        selectedRestaurant = [[Restaurant alloc] init];
     }
     return self;
 }

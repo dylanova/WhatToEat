@@ -12,6 +12,9 @@
 @interface InFoodItemViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *filterLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *ingredientsLabel;
 
 @end
 
@@ -31,6 +34,9 @@
     [super viewDidLoad];
     SharedManager *sharedManager = [SharedManager sharedManager];
     self.filterLabel.text = sharedManager.dishFilter;
+    self.nameLabel.text   = sharedManager.selectedDish.name;
+    //types
+    //ingredients
 }
 
 - (void)didReceiveMemoryWarning

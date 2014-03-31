@@ -7,6 +7,7 @@
 //
 
 #import "InListTableViewController.h"
+#import "InFoodItemViewController.h"
 #import "AddDishViewController.h"
 #import "SharedManager.h"
 #import "Dish.h"
@@ -19,7 +20,7 @@
 
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue
 {
-    AddDishViewController *source = [segue sourceViewController];
+    //AddDishViewController *source = [segue sourceViewController];
     
 }
 
@@ -113,7 +114,6 @@
 }
 */
 
-/*
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -122,6 +122,17 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
 }
-*/
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    //InFoodItemViewController *itemViewController = [[InFoodItemViewController alloc] initWithNibName:@"InFoodItemViewController" bundle:nil];
+
+    // Pass the selected object to the new view controller.
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    sharedManager.selectedDish = [sharedManager.dishArray objectAtIndex:indexPath.row];
+
+    // Push the view controller.
+    //[self.navigationController pushViewController:itemViewController animated:YES];
+}
 
 @end

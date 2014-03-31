@@ -12,6 +12,10 @@
 @interface OutFoodItemViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *filterLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *typesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
+@property (weak, nonatomic) IBOutlet UILabel *menuLabel;
 
 @end
 
@@ -31,6 +35,10 @@
     [super viewDidLoad];
     SharedManager *sharedManager = [SharedManager sharedManager];
     self.filterLabel.text = sharedManager.restaurantFilter;
+    self.nameLabel.text = sharedManager.selectedRestaurant.name;
+    //types
+    //website
+    //menu
 }
 
 - (void)didReceiveMemoryWarning
