@@ -60,7 +60,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     SharedManager *sharedManager = [SharedManager sharedManager];
-    return sharedManager.dishArray.count;
+    return [sharedManager.dishArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
@@ -70,6 +70,7 @@
     SharedManager *sharedManager = [SharedManager sharedManager];
     Dish *tmp = [sharedManager.dishArray objectAtIndex:indexPath.row];
     [cell.textLabel setText:tmp.name];
+    [cell.detailTextLabel setText:@"Detail"];
     
     return cell;
 }

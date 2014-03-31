@@ -8,6 +8,8 @@
 
 #import "OutListTableViewController.h"
 #import "AddRestaurantViewController.h"
+#import "SharedManager.h"
+#import "Restaurant.h"
 
 @interface OutListTableViewController ()
 
@@ -51,28 +53,26 @@
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
-    // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    return [sharedManager.restaurantArray count];
 }
 
-/*
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RestaurantCell" forIndexPath:indexPath];
     
-    // Configure the cell...
-    
+     SharedManager *sharedManager = [SharedManager sharedManager];
+     Restaurant *tmp = [sharedManager.restaurantArray objectAtIndex:indexPath.row];
+     [cell.textLabel setText:tmp.name];
+     [cell.detailTextLabel setText:@"Detail"];
+ 
     return cell;
 }
-*/
 
 /*
 // Override to support conditional editing of the table view.
