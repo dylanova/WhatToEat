@@ -69,7 +69,7 @@
      SharedManager *sharedManager = [SharedManager sharedManager];
      Restaurant *tmp = [sharedManager.restaurantArray objectAtIndex:indexPath.row];
      [cell.textLabel setText:tmp.name];
-     [cell.detailTextLabel setText:@"Detail"];
+     [cell.detailTextLabel setText:tmp.type];
  
     return cell;
 }

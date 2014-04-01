@@ -35,7 +35,7 @@
     SharedManager *sharedManager = [SharedManager sharedManager];
     self.filterLabel.text = sharedManager.dishFilter;
     self.nameLabel.text   = sharedManager.selectedDish.name;
-    //types
+    self.typesLabel.text  = sharedManager.selectedDish.type;
     //ingredients
 }
 

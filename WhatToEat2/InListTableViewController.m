@@ -71,7 +71,7 @@
     SharedManager *sharedManager = [SharedManager sharedManager];
     Dish *tmp = [sharedManager.dishArray objectAtIndex:indexPath.row];
     [cell.textLabel setText:tmp.name];
-    [cell.detailTextLabel setText:@"Detail"];
+    [cell.detailTextLabel setText:tmp.type];
     
     return cell;
 }

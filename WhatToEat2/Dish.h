@@ -11,7 +11,10 @@
 @interface Dish : NSObject
 
 @property NSString *name;
-@property NSMutableArray  *types;
+//@property NSMutableArray  *types;
+@property NSString *type;
 @property NSMutableArray  *ingredients;
+
++ (BOOL)initTestArray: (NSMutableArray*)dishArray;
 
 @end

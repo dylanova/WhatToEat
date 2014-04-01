@@ -34,18 +34,15 @@
     if (self = [super init]) {
         dishFilter = @"Default Dish";
         
-        dishArray = [[NSMutableArray alloc] init];
-        Dish *tmpDish = [[Dish alloc] init];
-        tmpDish.name = @"Spaghetti";
-        [dishArray addObject:tmpDish];
-        
         selectedDish = [[Dish alloc] init];
         
+        dishArray = [[NSMutableArray alloc] init];
+        [Dish initTestArray:dishArray];
+        
         restaurantFilter = @"Default Restaurant";
+        
         restaurantArray = [[NSMutableArray alloc] init];
-        Restaurant *tmpRestaurant = [[Restaurant alloc] init];
-        tmpRestaurant.name = @"Chuy's";
-        [restaurantArray addObject:tmpRestaurant];
+        [Restaurant initTestArray:restaurantArray];
 
         selectedRestaurant = [[Restaurant alloc] init];
     }

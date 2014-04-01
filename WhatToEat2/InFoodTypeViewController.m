@@ -8,6 +8,7 @@
 
 #import "InFoodTypeViewController.h"
 #import "SharedManager.h"
+#import "FoodTypes.h"
 
 @interface InFoodTypeViewController ()
 
@@ -27,18 +28,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    _dishTypesArray = @[@"All",
-                        @"Mexican",
-                        @"Italian",
-                        @"American",
-                        @"Seafood",
-                        @"Salad",
-                        @"Healthy",
-                        @"Chicken",
-                        @"Pork",
-                        @"Beef",
-                        @"Asian",
-                        @"Breakfast"];
 }
 
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
@@ -48,13 +37,14 @@
 
 - (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-    return _dishTypesArray.count;
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    return myFoodTypes.typesArray.count;
 }
 
 - (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
-
-    return _dishTypesArray[row];
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    return myFoodTypes.typesArray[row];
 }
 
 #pragma mark -
@@ -63,7 +53,8 @@
       inComponent:(NSInteger)component
 {
     SharedManager *sharedManager = [SharedManager sharedManager];
-    sharedManager.dishFilter = _dishTypesArray[row];
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    sharedManager.dishFilter = myFoodTypes.typesArray[row];
     return;
 }
 

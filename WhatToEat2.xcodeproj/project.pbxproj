@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3E5492E218EA5BBD00A285CF /* FoodTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5492E118EA5BBD00A285CF /* FoodTypes.m */; };
 		3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A018E503E800E2BA7B /* OutListTableViewController.m */; };
 		3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */; };
 		3EA717A718E5097C00E2BA7B /* AddRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A618E5097C00E2BA7B /* AddRestaurantViewController.m */; };
@@ -47,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3E5492E018EA5BBD00A285CF /* FoodTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTypes.h; sourceTree = "<group>"; };
+		3E5492E118EA5BBD00A285CF /* FoodTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTypes.m; sourceTree = "<group>"; };
 		3EA7179F18E503E800E2BA7B /* OutListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutListTableViewController.h; sourceTree = "<group>"; };
 		3EA717A018E503E800E2BA7B /* OutListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutListTableViewController.m; sourceTree = "<group>"; };
 		3EA717A218E5049D00E2BA7B /* OutFoodItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutFoodItemViewController.h; sourceTree = "<group>"; };
@@ -173,6 +176,8 @@
 				3EF6F27318DA8A59007BC0C9 /* OutFoodTypeViewController.h */,
 				3EF6F27418DA8A59007BC0C9 /* OutFoodTypeViewController.m */,
 				3EE58E4618E79C6800843062 /* Dish.h */,
+				3E5492E018EA5BBD00A285CF /* FoodTypes.h */,
+				3E5492E118EA5BBD00A285CF /* FoodTypes.m */,
 				3EE58E4918E79D9900843062 /* Restaurant.h */,
 				3EE58E4A18E79D9900843062 /* Restaurant.m */,
 				3EE58E4718E79C6800843062 /* Dish.m */,
@@ -316,6 +321,7 @@
 				3ED7187B18DA8E8000EA58B2 /* InListTableViewController.m in Sources */,
 				3EE58E4B18E79D9900843062 /* Restaurant.m in Sources */,
 				3EF6F24F18DA87A2007BC0C9 /* ViewController.m in Sources */,
+				3E5492E218EA5BBD00A285CF /* FoodTypes.m in Sources */,
 				3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */,
 				3EE58E4818E79C6800843062 /* Dish.m in Sources */,
 				3EF6F26F18DA88A7007BC0C9 /* InOrOutViewController.m in Sources */,

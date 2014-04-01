@@ -36,7 +36,7 @@
     SharedManager *sharedManager = [SharedManager sharedManager];
     self.filterLabel.text = sharedManager.restaurantFilter;
     self.nameLabel.text = sharedManager.selectedRestaurant.name;
-    //types
+    self.typesLabel.text = sharedManager.selectedRestaurant.type;
     //website
     //menu
 }
