@@ -13,11 +13,11 @@
 
 + (BOOL)initTestArray: (NSMutableArray*)restaurantArray {
     NSArray *testNames = [[self class] testNames];
-    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    NSArray *testTypes = [[self class] testTypes];
     for( int i = 0; i < testNames.count; i++){
         Restaurant *tmpRestaurant = [[Restaurant alloc] init];
         tmpRestaurant.name = testNames[i];
-        tmpRestaurant.type = myFoodTypes.typesArray[i];
+        tmpRestaurant.type = testTypes[i];
         [restaurantArray addObject:tmpRestaurant];
     }
     return true;
@@ -33,6 +33,17 @@
                      @"Pei Wei"];
     });
     return _testNames;
+}
+
++ (NSArray *)testTypes {
+    static NSArray *_testTypes;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _testTypes=@[@"American",
+                     @"Mexican",
+                     @"Asian"];
+    });
+    return _testTypes;
 }
 
 @end

@@ -8,9 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Restaurant : NSObject {
-    NSArray *testRestaurants;
-}
+@interface Restaurant : NSObject 
 
 @property NSString *name;
 //@property NSMutableArray  *types;

@@ -11,6 +11,4 @@
 @interface OutFoodTypeViewController : UIViewController
      <UIPickerViewDelegate, UIPickerViewDataSource>
 
-@property (strong, nonatomic) NSArray *restaurantTypesArray;
-
 @end
