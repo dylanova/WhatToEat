@@ -33,7 +33,8 @@
 - (id)init {
     if (self = [super init]) {
         /* Dish Initializations */
-        dishFilter = @"Default Dish";
+        //dishFilter = @"Default Dish";
+        dishFilter = @"All";
         
         selectedDish = [[Dish alloc] init];
         
@@ -41,7 +42,8 @@
         [Dish initTestArray:dishArray];
         
         /* Restaurant Initializations */
-        restaurantFilter = @"Default Restaurant";
+        //restaurantFilter = @"Default Restaurant";
+        restaurantFilter = @"All";
         
         restaurantArray = [[NSMutableArray alloc] init];
         [Restaurant initTestArray:restaurantArray];

@@ -10,6 +10,10 @@
 
 @interface InListTableViewController : UITableViewController
 
+@property (strong, nonatomic) NSMutableArray* filteredArray;
+
 - (IBAction)unwindToList:(UIStoryboardSegue *)segue;
+
+- (NSMutableArray*)filter: (NSMutableArray*) origArray :(NSString*) filterString;
 
 @end

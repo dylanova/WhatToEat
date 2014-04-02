@@ -24,6 +24,20 @@
     
 }
 
+- (NSMutableArray*)filter: (NSMutableArray*) origArray :(NSString*) filterString
+{
+    if( [filterString isEqual:@"All"] ){
+        return origArray;
+    }
+    
+    for( int i = 0; i < origArray.count; i++) {
+        if( ((Dish*)[origArray objectAtIndex:i]).type == filterString)
+            [_filteredArray addObject:origArray[i]];
+    }
+    return _filteredArray;
+}
+
+
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -36,6 +50,10 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    _filteredArray = [[NSMutableArray alloc] init];
+    _filteredArray = [self filter:sharedManager.dishArray :sharedManager.dishFilter];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -60,16 +78,14 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    SharedManager *sharedManager = [SharedManager sharedManager];
-    return [sharedManager.dishArray count];
+    return [_filteredArray count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DishCell" forIndexPath:indexPath];
     
-    SharedManager *sharedManager = [SharedManager sharedManager];
-    Dish *tmp = [sharedManager.dishArray objectAtIndex:indexPath.row];
+    Dish *tmp = [_filteredArray objectAtIndex:indexPath.row];
     [cell.textLabel setText:tmp.name];
     [cell.detailTextLabel setText:tmp.type];
     
@@ -129,7 +145,7 @@
 
     // Pass the selected object to the new view controller.
     SharedManager *sharedManager = [SharedManager sharedManager];
-    sharedManager.selectedDish = [sharedManager.dishArray objectAtIndex:indexPath.row];
+    sharedManager.selectedDish = [_filteredArray objectAtIndex:indexPath.row];
 
     // Push the view controller.
     //[self.navigationController pushViewController:itemViewController animated:YES];
