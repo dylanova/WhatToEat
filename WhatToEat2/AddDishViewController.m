@@ -7,6 +7,7 @@
 //
 
 #import "AddDishViewController.h"
+#import "SharedManager.h"
 
 @interface AddDishViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
@@ -21,6 +22,18 @@
     if( sender != self.doneButton) return;
     
     if(self.dishText.text.length > 0){
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *dishArrayFileName = [documentsDirectory stringByAppendingPathComponent:@"dish.dat"];
+
+        SharedManager *sharedManager = [SharedManager sharedManager];
+        
+        Dish *newDish = [[Dish alloc] init];
+        newDish.name = self.dishText.text;
+        
+        [sharedManager.dishArray addObject:newDish];
+        
+        [NSKeyedArchiver archiveRootObject:sharedManager.dishArray toFile:dishArrayFileName];
         return;
     }
 }

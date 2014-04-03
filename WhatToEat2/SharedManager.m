@@ -30,6 +30,27 @@
     return mySharedManager;
 }
 
+- (void) createDishArrayFromFile {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *dishArrayFileName = [documentsDirectory stringByAppendingPathComponent:@"dish.dat"];
+
+    NSData *data = [NSData dataWithContentsOfFile:dishArrayFileName];
+    
+    if( data != nil )
+    {
+        dishArray = [NSKeyedUnarchiver unarchiveObjectWithFile:dishArrayFileName];
+    }
+    else {
+        //Array file didn't exist... create a new one
+        dishArray = [[NSMutableArray alloc] init];
+        
+        //Fill with default values
+        [Dish initTestArray:dishArray];
+        [NSKeyedArchiver archiveRootObject:dishArray toFile:dishArrayFileName];
+    }
+}
+
 - (id)init {
     if (self = [super init]) {
         /* Dish Initializations */
@@ -38,8 +59,7 @@
         
         selectedDish = [[Dish alloc] init];
         
-        dishArray = [[NSMutableArray alloc] init];
-        [Dish initTestArray:dishArray];
+        [self createDishArrayFromFile];
         
         /* Restaurant Initializations */
         //restaurantFilter = @"Default Restaurant";

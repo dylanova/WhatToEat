@@ -33,4 +33,6 @@
 
 + (id)sharedManager;
 
+- (void) createDishArrayFromFile;
+
 @end

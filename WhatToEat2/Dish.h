@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Dish : NSObject
+@interface Dish : NSObject <NSCoding>
 
 @property NSString *name;
 //@property NSMutableArray  *types;

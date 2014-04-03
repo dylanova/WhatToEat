@@ -46,4 +46,25 @@
     return _testTypes;
 }
 
+#define kNameKey   @"kNameKey"
+#define kTypeKey   @"kTypeKey"
+#define kIngredientsKey @"kIngredientsKey"
+
+#pragma mark - NSCoding
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeObject:_name forKey:kNameKey];
+    [aCoder encodeObject:_type forKey:kTypeKey];
+    [aCoder encodeObject:_ingredients forKey:kIngredientsKey];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if ((self = [super init]))
+    {
+        _name = [aDecoder decodeObjectForKey:kNameKey];
+        _type = [aDecoder decodeObjectForKey:kTypeKey];
+        _ingredients = [aDecoder decodeObjectForKey:kIngredientsKey];
+    }
+    return self;
+}
+
 @end
