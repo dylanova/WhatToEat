@@ -8,6 +8,7 @@
 
 #import "AddDishViewController.h"
 #import "SharedManager.h"
+#import "FoodTypes.h"
 
 @interface AddDishViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
@@ -30,6 +31,7 @@
         
         Dish *newDish = [[Dish alloc] init];
         newDish.name = self.dishText.text;
+        newDish.type = _addDishType;
         
         [sharedManager.dishArray addObject:newDish];
         
@@ -57,6 +59,33 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    return myFoodTypes.typesArray.count;
+}
+
+- (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    return myFoodTypes.typesArray[row];
+}
+
+#pragma mark -
+#pragma mark PickerView Delegate
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
+      inComponent:(NSInteger)component
+{
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    _addDishType = myFoodTypes.typesArray[row];
+    return;
 }
 
 /*

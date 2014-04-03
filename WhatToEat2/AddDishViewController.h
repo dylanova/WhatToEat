@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AddDishViewController : UIViewController
+    <UIPickerViewDelegate, UIPickerViewDataSource>
+
+@property NSString *addDishType;
 
 @end
