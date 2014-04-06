@@ -30,6 +30,17 @@
     [super viewDidLoad];
 }
 
+- (IBAction) iDontKnow
+{
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    
+    NSMutableArray *filteredArray = [[NSMutableArray alloc] init];
+    filteredArray = [Restaurant filter:sharedManager.restaurantArray :sharedManager.restaurantFilter];
+    if ([filteredArray count] > 0) {
+        sharedManager.selectedRestaurant = filteredArray[arc4random_uniform([filteredArray count])];
+    }
+}
+
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
 {
     return 1;

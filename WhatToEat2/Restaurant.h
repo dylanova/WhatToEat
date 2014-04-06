@@ -8,14 +8,15 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Restaurant : NSObject 
+@interface Restaurant : NSObject <NSCoding>
 
 @property NSString *name;
 //@property NSMutableArray  *types;
 @property NSString  *type;
-@property NSURL    *website;
-@property NSURL    *menu;       /*might not be necessary*/
+@property NSURL    *menu;
 
 + (BOOL)initTestArray: (NSMutableArray*)restaurantArray;
+
++ (NSMutableArray*)filter: (NSMutableArray*) origArray :(NSString*) filterString;
 
 @end

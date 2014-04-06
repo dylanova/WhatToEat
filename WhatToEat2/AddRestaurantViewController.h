@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface AddRestaurantViewController : UIViewController
+    <UIPickerViewDelegate, UIPickerViewDataSource>
+
+@property NSString *addRestaurantType;
 
 @end

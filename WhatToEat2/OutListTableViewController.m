@@ -23,19 +23,6 @@
     
 }
 
-- (NSMutableArray*)filter: (NSMutableArray*) origArray :(NSString*) filterString
-{
-    if( [filterString isEqual:@"All"] ){
-        return origArray;
-    }
-    
-    for( int i = 0; i < origArray.count; i++) {
-        if( ((Restaurant*)[origArray objectAtIndex:i]).type == filterString)
-            [_filteredArray addObject:origArray[i]];
-    }
-    return _filteredArray;
-}
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -51,13 +38,18 @@
     
     SharedManager *sharedManager = [SharedManager sharedManager];
     _filteredArray = [[NSMutableArray alloc] init];
-    _filteredArray = [self filter:sharedManager.restaurantArray :sharedManager.restaurantFilter];
+    _filteredArray = [Restaurant filter:sharedManager.restaurantArray :sharedManager.restaurantFilter];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+}
+
+-(void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (void)didReceiveMemoryWarning

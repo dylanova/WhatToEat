@@ -7,6 +7,8 @@
 //
 
 #import "AddRestaurantViewController.h"
+#import "SharedManager.h"
+#import "FoodTypes.h"
 
 @interface AddRestaurantViewController ()
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
@@ -21,6 +23,19 @@
     if( sender != self.doneButton) return;
     
     if(self.restaurantText.text.length > 0){
+        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+        NSString *documentsDirectory = [paths objectAtIndex:0];
+        NSString *restaurantArrayFileName = [documentsDirectory stringByAppendingPathComponent:@"restaurant.dat"];
+        
+        SharedManager *sharedManager = [SharedManager sharedManager];
+        
+        Restaurant *newRestaurant = [[Restaurant alloc] init];
+        newRestaurant.name = self.restaurantText.text;
+        newRestaurant.type = _addRestaurantType;
+        
+        [sharedManager.restaurantArray addObject:newRestaurant];
+        
+        [NSKeyedArchiver archiveRootObject:sharedManager.restaurantArray toFile:restaurantArrayFileName];
         return;
     }
 }
@@ -44,6 +59,33 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView
+{
+    return 1;
+}
+
+- (NSInteger) pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
+{
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    return myFoodTypes.typesArray.count;
+}
+
+- (NSString *) pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
+{
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    return myFoodTypes.typesArray[row];
+}
+
+#pragma mark -
+#pragma mark PickerView Delegate
+-(void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row
+      inComponent:(NSInteger)component
+{
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    _addRestaurantType = myFoodTypes.typesArray[row];
+    return;
 }
 
 /*

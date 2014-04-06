@@ -51,6 +51,27 @@
     }
 }
 
+- (void) createRestaurantArrayFromFile {
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    NSString *restaurantArrayFileName = [documentsDirectory stringByAppendingPathComponent:@"restaurant.dat"];
+    
+    NSData *data = [NSData dataWithContentsOfFile:restaurantArrayFileName];
+    
+    if( data != nil )
+    {
+        restaurantArray = [NSKeyedUnarchiver unarchiveObjectWithFile:restaurantArrayFileName];
+    }
+    else {
+        //Array file didn't exist... create a new one
+        restaurantArray = [[NSMutableArray alloc] init];
+        
+        //Fill with default values
+        [Restaurant initTestArray:restaurantArray];
+        [NSKeyedArchiver archiveRootObject:restaurantArray toFile:restaurantArrayFileName];
+    }
+}
+
 - (id)init {
     if (self = [super init]) {
         /* Dish Initializations */
@@ -65,10 +86,9 @@
         //restaurantFilter = @"Default Restaurant";
         restaurantFilter = @"All";
         
-        restaurantArray = [[NSMutableArray alloc] init];
-        [Restaurant initTestArray:restaurantArray];
-
         selectedRestaurant = [[Restaurant alloc] init];
+
+        [self createRestaurantArrayFromFile];
     }
     return self;
 }

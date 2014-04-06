@@ -34,5 +34,6 @@
 + (id)sharedManager;
 
 - (void) createDishArrayFromFile;
+- (void) createRestaurantArrayFromFile;
 
 @end
