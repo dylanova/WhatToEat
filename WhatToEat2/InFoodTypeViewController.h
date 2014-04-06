@@ -11,4 +11,6 @@
 @interface InFoodTypeViewController : UIViewController
     <UIPickerViewDelegate, UIPickerViewDataSource>
 
+- (IBAction) iDontKnow;
+
 @end

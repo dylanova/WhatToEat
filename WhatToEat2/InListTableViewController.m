@@ -24,20 +24,6 @@
     
 }
 
-- (NSMutableArray*)filter: (NSMutableArray*) origArray :(NSString*) filterString
-{
-    if( [filterString isEqual:@"All"] ){
-        return origArray;
-    }
-    
-    for( int i = 0; i < origArray.count; i++) {
-        if( ((Dish*)[origArray objectAtIndex:i]).type == filterString)
-            [_filteredArray addObject:origArray[i]];
-    }
-    return _filteredArray;
-}
-
-
 - (id)initWithStyle:(UITableViewStyle)style
 {
     self = [super initWithStyle:style];
@@ -53,7 +39,7 @@
     
     SharedManager *sharedManager = [SharedManager sharedManager];
     _filteredArray = [[NSMutableArray alloc] init];
-    _filteredArray = [self filter:sharedManager.dishArray :sharedManager.dishFilter];
+    _filteredArray = [Dish filter:sharedManager.dishArray :sharedManager.dishFilter];
     
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;

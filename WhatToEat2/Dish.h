@@ -17,4 +17,6 @@
 
 + (BOOL)initTestArray: (NSMutableArray*)dishArray;
 
++ (NSMutableArray*)filter: (NSMutableArray*) origArray :(NSString*) filterString;
+
 @end

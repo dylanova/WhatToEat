@@ -11,6 +11,21 @@
 
 @implementation Dish
 
++ (NSMutableArray*)filter: (NSMutableArray*) origArray :(NSString*) filterString
+{
+    if( [filterString isEqual:@"All"] ){
+        return origArray;
+    }
+    
+    NSMutableArray *filteredArray = [[NSMutableArray alloc] init];
+    
+    for( int i = 0; i < origArray.count; i++) {
+        if( [((Dish*)[origArray objectAtIndex:i]).type isEqualToString:filterString] )
+            [filteredArray addObject:origArray[i]];
+    }
+    return filteredArray;
+}
+
 + (BOOL)initTestArray: (NSMutableArray*)dishArray {
     NSArray *testNames = [[self class] testNames];
     NSArray *testTypes = [[self class] testTypes];
