@@ -13,7 +13,8 @@
 @property NSString *name;
 //@property NSMutableArray  *types;
 @property NSString  *type;
-@property NSURL    *menu;
+//@property NSURL    *menu;
+@property NSString *menu;
 
 + (BOOL)initTestArray: (NSMutableArray*)restaurantArray;
 

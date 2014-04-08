@@ -14,6 +14,8 @@
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
 @property (weak, nonatomic) IBOutlet UITextField *restaurantText;
+@property (weak, nonatomic) IBOutlet UITextField *menuText;
+
 @end
 
 @implementation AddRestaurantViewController
@@ -32,6 +34,8 @@
         Restaurant *newRestaurant = [[Restaurant alloc] init];
         newRestaurant.name = self.restaurantText.text;
         newRestaurant.type = _addRestaurantType;
+        newRestaurant.menu = self.menuText.text;
+        //newRestaurant.menu = [NSURL URLWithString:self.menuText.text];
         
         [sharedManager.restaurantArray addObject:newRestaurant];
         

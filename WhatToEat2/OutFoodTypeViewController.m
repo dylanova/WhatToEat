@@ -38,7 +38,19 @@
     filteredArray = [Restaurant filter:sharedManager.restaurantArray :sharedManager.restaurantFilter];
     if ([filteredArray count] > 0) {
         sharedManager.selectedRestaurant = filteredArray[arc4random_uniform([filteredArray count])];
+        [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"IdkOutView"] animated:YES];
     }
+    else {
+        NSString *emptyCategory = [NSString stringWithFormat: @"No %@ Restaurants!", sharedManager.restaurantFilter];
+
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:emptyCategory message:@"Try a different category" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
+    }
+}
+
+- (void)alertView:(UIAlertView *)alertV didDismissWithButtonIndex:(NSInteger)buttonIndex
+{
+    //go back a page
 }
 
 - (NSInteger) numberOfComponentsInPickerView:(UIPickerView *)pickerView

@@ -29,17 +29,18 @@
 + (BOOL)initTestArray: (NSMutableArray*)restaurantArray {
     NSArray *testNames = [[self class] testNames];
     NSArray *testTypes = [[self class] testTypes];
+    NSArray *testMenus = [[self class] testMenus];
     for( int i = 0; i < testNames.count; i++){
         Restaurant *tmpRestaurant = [[Restaurant alloc] init];
         tmpRestaurant.name = testNames[i];
         tmpRestaurant.type = testTypes[i];
+        tmpRestaurant.menu = testMenus[i];
         [restaurantArray addObject:tmpRestaurant];
     }
     return true;
 }
 
 + (NSArray *)testNames {
-    
     static NSArray *_testNames;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
@@ -59,6 +60,17 @@
                      @"Asian"];
     });
     return _testTypes;
+}
+
++ (NSArray *)testMenus {
+    static NSArray *_testMenus;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _testMenus=@[@"http://www.mcalistersdeli.com/menu/classic-sandwiches",
+                     @"http://www.chuys.com/#/menu",
+                     @"https://www.peiwei.com/menu/menu.aspx"];
+    });
+    return _testMenus;
 }
 
 #define kNameKey   @"kNameKey"

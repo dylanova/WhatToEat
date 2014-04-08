@@ -37,8 +37,8 @@
     self.filterLabel.text = sharedManager.restaurantFilter;
     self.nameLabel.text = sharedManager.selectedRestaurant.name;
     self.typesLabel.text = sharedManager.selectedRestaurant.type;
-    //website
-    //menu
+    self.menuLabel.text = sharedManager.selectedRestaurant.menu;
+    //self.menuLabel.text = [sharedManager.selectedRestaurant.menu absoluteString];
 }
 
 - (void)didReceiveMemoryWarning

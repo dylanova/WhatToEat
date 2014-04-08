@@ -38,6 +38,14 @@
     filteredArray = [Dish filter:sharedManager.dishArray :sharedManager.dishFilter];
     if ([filteredArray count] > 0) {
         sharedManager.selectedDish = filteredArray[arc4random_uniform([filteredArray count])];
+        [self.navigationController pushViewController:[self.storyboard instantiateViewControllerWithIdentifier:@"IdkInView"] animated:YES];
+
+    }
+    else {
+        NSString *emptyCategory = [NSString stringWithFormat: @"No %@ Dishes!", sharedManager.dishFilter];
+        
+        UIAlertView *alert = [[UIAlertView alloc] initWithTitle:emptyCategory message:@"Try a different category" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+        [alert show];
     }
 }
 
