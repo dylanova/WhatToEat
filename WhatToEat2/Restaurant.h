@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "Location.h"
 
 @interface Restaurant : NSObject <NSCoding>
 
@@ -15,6 +16,7 @@
 @property NSString  *type;
 //@property NSURL    *menu;
 @property NSString *menu;
+@property Location *location;
 
 + (BOOL)initTestArray: (NSMutableArray*)restaurantArray;
 

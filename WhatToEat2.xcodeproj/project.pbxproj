@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3E5492E218EA5BBD00A285CF /* FoodTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5492E118EA5BBD00A285CF /* FoodTypes.m */; };
+		3E619E9218F3B2BA004CACCF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E619E9118F3B2BA004CACCF /* MapKit.framework */; };
+		3E619E9518F3B4EA004CACCF /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619E9418F3B4EA004CACCF /* Location.m */; };
 		3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A018E503E800E2BA7B /* OutListTableViewController.m */; };
 		3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */; };
 		3EA717A718E5097C00E2BA7B /* AddRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A618E5097C00E2BA7B /* AddRestaurantViewController.m */; };
@@ -50,6 +52,9 @@
 /* Begin PBXFileReference section */
 		3E5492E018EA5BBD00A285CF /* FoodTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FoodTypes.h; sourceTree = "<group>"; };
 		3E5492E118EA5BBD00A285CF /* FoodTypes.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FoodTypes.m; sourceTree = "<group>"; };
+		3E619E9118F3B2BA004CACCF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		3E619E9318F3B4EA004CACCF /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
+		3E619E9418F3B4EA004CACCF /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
 		3EA7179F18E503E800E2BA7B /* OutListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutListTableViewController.h; sourceTree = "<group>"; };
 		3EA717A018E503E800E2BA7B /* OutListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutListTableViewController.m; sourceTree = "<group>"; };
 		3EA717A218E5049D00E2BA7B /* OutFoodItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutFoodItemViewController.h; sourceTree = "<group>"; };
@@ -101,6 +106,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3E619E9218F3B2BA004CACCF /* MapKit.framework in Frameworks */,
 				3EF6F23818DA87A2007BC0C9 /* CoreGraphics.framework in Frameworks */,
 				3EF6F23A18DA87A2007BC0C9 /* UIKit.framework in Frameworks */,
 				3EF6F23618DA87A2007BC0C9 /* Foundation.framework in Frameworks */,
@@ -142,6 +148,7 @@
 		3EF6F23418DA87A2007BC0C9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3E619E9118F3B2BA004CACCF /* MapKit.framework */,
 				3EF6F23518DA87A2007BC0C9 /* Foundation.framework */,
 				3EF6F23718DA87A2007BC0C9 /* CoreGraphics.framework */,
 				3EF6F23918DA87A2007BC0C9 /* UIKit.framework */,
@@ -182,6 +189,8 @@
 				3EE58E4A18E79D9900843062 /* Restaurant.m */,
 				3EE58E4718E79C6800843062 /* Dish.m */,
 				3EBD1F6A18E74512005ABC8C /* SharedManager.h */,
+				3E619E9318F3B4EA004CACCF /* Location.h */,
+				3E619E9418F3B4EA004CACCF /* Location.m */,
 				3EBD1F6B18E74512005ABC8C /* SharedManager.m */,
 				3ED7187618DA8E2500EA58B2 /* InFoodItemViewController.h */,
 				3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */,
@@ -333,6 +342,7 @@
 				3EF6F27218DA88FD007BC0C9 /* InFoodTypeViewController.m in Sources */,
 				3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */,
 				3EA717AA18E5098B00E2BA7B /* AddDishViewController.m in Sources */,
+				3E619E9518F3B4EA004CACCF /* Location.m in Sources */,
 				3EF6F24218DA87A2007BC0C9 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

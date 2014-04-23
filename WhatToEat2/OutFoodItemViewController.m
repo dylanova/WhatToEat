@@ -8,18 +8,24 @@
 
 #import "OutFoodItemViewController.h"
 #import "SharedManager.h"
+#import "Location.h"
 
 @interface OutFoodItemViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *filterLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typesLabel;
-@property (weak, nonatomic) IBOutlet UILabel *websiteLabel;
-@property (weak, nonatomic) IBOutlet UILabel *menuLabel;
 
 @end
 
 @implementation OutFoodItemViewController
+
+- (IBAction) menuLink
+{
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    [[UIApplication sharedApplication] openURL:[NSURL URLWithString:sharedManager.selectedRestaurant.menu]];
+}
+
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -37,8 +43,21 @@
     self.filterLabel.text = sharedManager.restaurantFilter;
     self.nameLabel.text = sharedManager.selectedRestaurant.name;
     self.typesLabel.text = sharedManager.selectedRestaurant.type;
-    self.menuLabel.text = sharedManager.selectedRestaurant.menu;
     //self.menuLabel.text = [sharedManager.selectedRestaurant.menu absoluteString];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    Location *model = [[Location alloc] init];
+    Location *poi = [model getTestLocation];
+    
+    CLLocationCoordinate2D poiCoodinates;
+    poiCoodinates.latitude = poi.latitude;
+    poiCoodinates.longitude= poi.longitude;
+    
+    MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(poiCoodinates, 750, 750);
+    
+    [self.mapView setRegion:viewRegion animated:YES];
 }
 
 - (void)didReceiveMemoryWarning
