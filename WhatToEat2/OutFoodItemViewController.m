@@ -56,10 +56,15 @@
     CLLocationCoordinate2D poiCoodinates;
     poiCoodinates.latitude = poi.latitude;
     poiCoodinates.longitude= poi.longitude;
+    POI *poiAnnotation = [[POI alloc] initWithCoordinate:poiCoodinates];
+    poiAnnotation.title = sharedManager.selectedRestaurant.name;
+    poiAnnotation.subtitle = sharedManager.selectedRestaurant.type;
     
     MKCoordinateRegion viewRegion = MKCoordinateRegionMakeWithDistance(poiCoodinates, 750, 750);
     
     [self.mapView setRegion:viewRegion animated:YES];
+    [self.mapView addAnnotation:poiAnnotation];
+    [self.mapView selectAnnotation:poiAnnotation animated:YES];
 }
 
 - (void)didReceiveMemoryWarning

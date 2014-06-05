@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import <MapKit/MapKit.h>
+#import "POI.h"
 
 @interface OutFoodItemViewController : UIViewController
 
