@@ -16,4 +16,6 @@
 
 - (IBAction) menuLink;
 
+- (void) setupLabelVisuals;
+
 @end

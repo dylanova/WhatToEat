@@ -14,7 +14,6 @@
 @property NSString *name;
 //@property NSMutableArray  *types;
 @property NSString  *type;
-//@property NSURL    *menu;
 @property NSString *menu;
 @property Location *location;
 

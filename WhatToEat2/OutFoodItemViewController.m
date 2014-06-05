@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *filterLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typesLabel;
+@property (weak, nonatomic) IBOutlet UIButton *menuButton;
 
 @end
 
@@ -36,6 +37,30 @@
     return self;
 }
 
+- (void)setupLabelVisuals
+{
+    //Restaurant name label
+    self.nameLabel.layer.borderColor = [UIColor blueColor].CGColor;
+    self.nameLabel.layer.borderWidth = 4.0;
+    self.nameLabel.layer.cornerRadius = 8;
+    [self.nameLabel setTextAlignment:NSTextAlignmentCenter];
+    self.nameLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
+    
+    //Restaurant type label
+    self.typesLabel.layer.borderColor = [UIColor blueColor].CGColor;
+    self.typesLabel.layer.borderWidth = 4.0;
+    self.typesLabel.layer.cornerRadius = 8;
+    [self.typesLabel setTextAlignment:NSTextAlignmentCenter];
+    
+    //Menu link
+    [self.menuButton setBackgroundColor:[UIColor lightGrayColor]];
+    [self.menuButton.layer setBorderColor:[[UIColor blueColor] CGColor]];
+    [self.menuButton.layer setBorderWidth:2.0f];
+    [self.menuButton.layer setCornerRadius:8];
+    [self.menuButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -43,16 +68,17 @@
     self.filterLabel.text = sharedManager.restaurantFilter;
     self.nameLabel.text = sharedManager.selectedRestaurant.name;
     self.typesLabel.text = sharedManager.selectedRestaurant.type;
-    //self.menuLabel.text = [sharedManager.selectedRestaurant.menu absoluteString];
+    
+    [self setupLabelVisuals];
 }
 
 - (void)viewDidAppear:(BOOL)animated
 {
     SharedManager *sharedManager = [SharedManager sharedManager];
-    //Location *model = [[Location alloc] init];
-    //Location *poi = [model getTestLocation];
     Location *poi = sharedManager.selectedRestaurant.location;
     
+    //Need to have this because
+    //  POI.coordinate(lat,long) is read-only
     CLLocationCoordinate2D poiCoodinates;
     poiCoodinates.latitude = poi.latitude;
     poiCoodinates.longitude= poi.longitude;
