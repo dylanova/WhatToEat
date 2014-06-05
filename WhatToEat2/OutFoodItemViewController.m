@@ -48,8 +48,10 @@
 
 - (void)viewDidAppear:(BOOL)animated
 {
-    Location *model = [[Location alloc] init];
-    Location *poi = [model getTestLocation];
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    //Location *model = [[Location alloc] init];
+    //Location *poi = [model getTestLocation];
+    Location *poi = sharedManager.selectedRestaurant.location;
     
     CLLocationCoordinate2D poiCoodinates;
     poiCoodinates.latitude = poi.latitude;

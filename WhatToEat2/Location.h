@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface Location : NSObject
+@interface Location : NSObject <NSCoding>
 
 @property (nonatomic) float latitude;
 @property (nonatomic) float longitude;

@@ -21,4 +21,22 @@
     return myLocation;
 }
 
+#define kLongKey   @"kLatitudeKey"
+#define kLatKey   @"kLongitudeKey"
+
+#pragma mark - NSCoding
+- (void)encodeWithCoder:(NSCoder *)aCoder {
+    [aCoder encodeFloat: _longitude forKey:kLongKey];
+    [aCoder encodeFloat:_latitude forKey:kLatKey];
+}
+
+- (id)initWithCoder:(NSCoder *)aDecoder {
+    if ((self = [super init]))
+    {
+        _longitude = [aDecoder decodeFloatForKey:kLongKey];
+        _latitude = [aDecoder decodeFloatForKey:kLatKey];
+    }
+    return self;
+}
+
 @end

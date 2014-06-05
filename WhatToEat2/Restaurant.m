@@ -30,11 +30,13 @@
     NSArray *testNames = [[self class] testNames];
     NSArray *testTypes = [[self class] testTypes];
     NSArray *testMenus = [[self class] testMenus];
+    NSArray *testLocations = [[self class] testLocations];
     for( int i = 0; i < testNames.count; i++){
         Restaurant *tmpRestaurant = [[Restaurant alloc] init];
         tmpRestaurant.name = testNames[i];
         tmpRestaurant.type = testTypes[i];
         tmpRestaurant.menu = testMenus[i];
+        tmpRestaurant.location = testLocations[i];
         [restaurantArray addObject:tmpRestaurant];
     }
     return true;
@@ -73,15 +75,35 @@
     return _testMenus;
 }
 
++ (NSArray *)testLocations {
+    static NSArray *_testLocations;
+    Location *mcAlistersLoc = [[Location alloc] init];
+    mcAlistersLoc.latitude = 30.354979;
+    mcAlistersLoc.longitude = -97.733070;
+    Location *chuysLoc = [[Location alloc] init];
+    chuysLoc.latitude = 30.418512;
+    chuysLoc.longitude = -97.747855;
+    Location *peiweiLoc = [[Location alloc] init];
+    peiweiLoc.latitude = 30.446356;
+    peiweiLoc.longitude = -97.789140;
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        _testLocations = [[NSArray alloc] initWithObjects:mcAlistersLoc, chuysLoc, peiweiLoc, nil];
+    });
+    return _testLocations;
+}
+
 #define kNameKey   @"kNameKey"
 #define kTypeKey   @"kTypeKey"
 #define kMenuKey   @"kMenuKey"
+#define kLocKey    @"kLocKey"
 
 #pragma mark - NSCoding
 - (void)encodeWithCoder:(NSCoder *)aCoder {
     [aCoder encodeObject:_name forKey:kNameKey];
     [aCoder encodeObject:_type forKey:kTypeKey];
     [aCoder encodeObject:_menu forKey:kMenuKey];
+    [aCoder encodeObject:_location forKey:kLocKey];
 }
 
 - (id)initWithCoder:(NSCoder *)aDecoder {
@@ -90,6 +112,7 @@
         _name = [aDecoder decodeObjectForKey:kNameKey];
         _type = [aDecoder decodeObjectForKey:kTypeKey];
         _menu = [aDecoder decodeObjectForKey:kMenuKey];
+        _location = [aDecoder decodeObjectForKey:kLocKey];
     }
     return self;
 }
