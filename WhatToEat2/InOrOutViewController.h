@@ -10,4 +10,6 @@
 
 @interface InOrOutViewController : UIViewController
 
+- (void) setupLabelVisuals;
+
 @end

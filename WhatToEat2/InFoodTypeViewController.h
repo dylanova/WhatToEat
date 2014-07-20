@@ -13,4 +13,6 @@
 
 - (IBAction) iDontKnow;
 
+- (void) setupLabelVisuals;
+
 @end

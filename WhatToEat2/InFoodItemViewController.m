@@ -14,11 +14,22 @@
 @property (weak, nonatomic) IBOutlet UILabel *filterLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typesLabel;
-@property (weak, nonatomic) IBOutlet UILabel *ingredientsLabel;
+//@property (weak, nonatomic) IBOutlet UILabel *ingredientsLabel;
+@property (weak, nonatomic) IBOutlet UIButton *pinterestButton;
 
 @end
 
 @implementation InFoodItemViewController
+
+- (IBAction) pinterestLink
+{
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    
+    NSString *title = [NSString stringWithFormat: @"Pinterest %@ Recipe", sharedManager.selectedDish.name];
+    
+    UIAlertView *alert = [[UIAlertView alloc] initWithTitle:title message:@"Take me to Pinterest!" delegate:self cancelButtonTitle:@"OK" otherButtonTitles:nil];
+    [alert show];
+}
 
 - (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {
@@ -29,6 +40,29 @@
     return self;
 }
 
+- (void)setupLabelVisuals
+{
+    //Restaurant name label
+    self.nameLabel.layer.borderColor = [UIColor blueColor].CGColor;
+    self.nameLabel.layer.borderWidth = 4.0;
+    self.nameLabel.layer.cornerRadius = 8;
+    [self.nameLabel setTextAlignment:NSTextAlignmentCenter];
+    self.nameLabel.font = [UIFont fontWithName:@"TrebuchetMS-Bold" size:18];
+    
+    //Restaurant type label
+    self.typesLabel.layer.borderColor = [UIColor blueColor].CGColor;
+    self.typesLabel.layer.borderWidth = 4.0;
+    self.typesLabel.layer.cornerRadius = 8;
+    [self.typesLabel setTextAlignment:NSTextAlignmentCenter];
+    
+    //Pinterest link
+    //[self.pinterestButton setBackgroundColor:[UIColor lightGrayColor]];
+    [self.pinterestButton.layer setBorderColor:[[UIColor redColor] CGColor]];
+    [self.pinterestButton.layer setBorderWidth:2.0f];
+    [self.pinterestButton.layer setCornerRadius:8];
+    //[self.pinterestButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -37,6 +71,8 @@
     self.nameLabel.text   = sharedManager.selectedDish.name;
     self.typesLabel.text  = sharedManager.selectedDish.type;
     //ingredients
+    
+    [self setupLabelVisuals];
 }
 
 - (void)didReceiveMemoryWarning

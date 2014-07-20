@@ -10,4 +10,8 @@
 
 @interface InFoodItemViewController : UIViewController
 
+- (IBAction) pinterestLink;
+
+- (void)setupLabelVisuals;
+
 @end

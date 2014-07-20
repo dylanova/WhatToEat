@@ -12,6 +12,9 @@
 
 @interface OutFoodTypeViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *listButton;
+@property (weak, nonatomic) IBOutlet UIButton *idkButton;
+
 @end
 
 @implementation OutFoodTypeViewController
@@ -25,9 +28,28 @@
     return self;
 }
 
+- (void)setupLabelVisuals
+{
+    //List Button
+    //[self.inButton setBackgroundColor:[UIColor lightGrayColor]];
+    [self.listButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.listButton.layer setBorderWidth:2.0f];
+    [self.listButton.layer setCornerRadius:8];
+    [self.listButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    
+    //IDK Button
+    //[self.outButton setBackgroundColor:[UIColor lightGrayColor]];
+    [self.idkButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.idkButton.layer setBorderWidth:2.0f];
+    [self.idkButton.layer setCornerRadius:8];
+    [self.idkButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    [self setupLabelVisuals];
 }
 
 - (IBAction) iDontKnow

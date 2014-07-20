@@ -10,6 +10,9 @@
 
 @interface InOrOutViewController ()
 
+@property (weak, nonatomic) IBOutlet UIButton *inButton;
+@property (weak, nonatomic) IBOutlet UIButton *outButton;
+
 @end
 
 @implementation InOrOutViewController
@@ -23,10 +26,28 @@
     return self;
 }
 
+- (void)setupLabelVisuals
+{
+    //In Button
+    //[self.inButton setBackgroundColor:[UIColor lightGrayColor]];
+    [self.inButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.inButton.layer setBorderWidth:2.0f];
+    [self.inButton.layer setCornerRadius:8];
+    [self.inButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    
+    //Out Button
+    //[self.outButton setBackgroundColor:[UIColor lightGrayColor]];
+    [self.outButton.layer setBorderColor:[[UIColor blackColor] CGColor]];
+    [self.outButton.layer setBorderWidth:2.0f];
+    [self.outButton.layer setCornerRadius:8];
+    [self.outButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
+    [self setupLabelVisuals];
 }
 
 - (void)didReceiveMemoryWarning
