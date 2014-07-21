@@ -1,46 +1,46 @@
 //
-//  AddRestaurantViewController.m
+//  EditDishViewController.m
 //  WhatToEat2
 //
-//  Created by Dylan Porter on 3/27/14.
+//  Created by Dylan Porter on 7/20/14.
 //  Copyright (c) 2014 Dylan Porter. All rights reserved.
 //
 
-#import "AddRestaurantViewController.h"
+#import "EditDishViewController.h"
 #import "SharedManager.h"
 #import "FoodTypes.h"
 
-@interface AddRestaurantViewController ()
+@interface EditDishViewController ()
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *cancelButton;
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *doneButton;
-@property (weak, nonatomic) IBOutlet UITextField *restaurantText;
-@property (weak, nonatomic) IBOutlet UITextField *menuText;
+@property (weak, nonatomic) IBOutlet UITextField *dishName;
+@property (weak, nonatomic) IBOutlet UITextView *ingredients;
+@property (weak, nonatomic) IBOutlet UIPickerView *picker;
 
 @end
 
-@implementation AddRestaurantViewController
+@implementation EditDishViewController
 
 - (void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if( sender != self.doneButton) return;
     
-    if(self.restaurantText.text.length > 0){
-        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
-        NSString *documentsDirectory = [paths objectAtIndex:0];
-        NSString *restaurantArrayFileName = [documentsDirectory stringByAppendingPathComponent:@"restaurant.dat"];
-        
-        SharedManager *sharedManager = [SharedManager sharedManager];
-        
-        Restaurant *newRestaurant = [[Restaurant alloc] init];
-        newRestaurant.name = self.restaurantText.text;
-        newRestaurant.type = _addRestaurantType;
-        newRestaurant.menu = self.menuText.text;
-        //newRestaurant.menu = [NSURL URLWithString:self.menuText.text];
-        
-        [sharedManager.restaurantArray addObject:newRestaurant];
-        
-        [NSKeyedArchiver archiveRootObject:sharedManager.restaurantArray toFile:restaurantArrayFileName];
+    if(self.dishName.text.length > 0){
+//        NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+//        NSString *documentsDirectory = [paths objectAtIndex:0];
+//        NSString *restaurantArrayFileName = [documentsDirectory stringByAppendingPathComponent:@"dish.dat"];
+//        
+//        SharedManager *sharedManager = [SharedManager sharedManager];
+//        
+//        Dish *newDish = [[Dish alloc] init];
+//        newDish.name = self.dishName.text;
+//        newDish.type = _newDishType;
+//        //newDish.menu = [NSURL URLWithString:self.menuText.text];
+//        
+//        [sharedManager.restaurantArray addObject:newDish];
+//        
+//        [NSKeyedArchiver archiveRootObject:sharedManager.restaurantArray toFile:restaurantArrayFileName];
         return;
     }
 }
@@ -54,10 +54,27 @@
     return self;
 }
 
+- (void)setupLabelVisuals
+{
+    //Ingredients View
+    self.ingredients.layer.borderColor = [UIColor blackColor].CGColor;
+    self.ingredients.layer.borderWidth = 2.0;
+    self.ingredients.layer.cornerRadius = 8;
+}
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    SharedManager *sharedManager = [SharedManager sharedManager];
+    self.dishName.text   = sharedManager.selectedDish.name;
+    self.ingredients.text = sharedManager.selectedDish.ingredients;
+    
+    FoodTypes *myFoodTypes = [FoodTypes foodTypes];
+    NSUInteger typeIndex = [myFoodTypes.typesArray indexOfObject:sharedManager.selectedDish.type];
+    [self.picker selectRow:typeIndex inComponent:0 animated:YES];
+
+    
+    [self setupLabelVisuals];
 }
 
 - (void)didReceiveMemoryWarning
@@ -89,7 +106,7 @@
       inComponent:(NSInteger)component
 {
     FoodTypes *myFoodTypes = [FoodTypes foodTypes];
-    _addRestaurantType = myFoodTypes.typesArray[row];
+    _dishType = myFoodTypes.typesArray[row];
     return;
 }
 

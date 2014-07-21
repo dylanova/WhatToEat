@@ -13,7 +13,8 @@
 @property NSString *name;
 //@property NSMutableArray  *types;
 @property NSString *type;
-@property NSMutableArray  *ingredients;
+//@property NSMutableArray  *ingredients;
+@property NSString *ingredients;
 
 + (BOOL)initTestArray: (NSMutableArray*)dishArray;
 

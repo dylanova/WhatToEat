@@ -8,18 +8,25 @@
 
 #import "InFoodItemViewController.h"
 #import "SharedManager.h"
+#import "EditDishViewController.h"
 
 @interface InFoodItemViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *filterLabel;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *typesLabel;
-//@property (weak, nonatomic) IBOutlet UILabel *ingredientsLabel;
+@property (weak, nonatomic) IBOutlet UITextView *ingredientsView;
 @property (weak, nonatomic) IBOutlet UIButton *pinterestButton;
 
 @end
 
 @implementation InFoodItemViewController
+
+- (IBAction)unwindToDish:(UIStoryboardSegue *)segue
+{
+    //AddRestaurantViewController *source = [segue sourceViewController];
+    
+}
 
 - (IBAction) pinterestLink
 {
@@ -57,10 +64,16 @@
     
     //Pinterest link
     //[self.pinterestButton setBackgroundColor:[UIColor lightGrayColor]];
-    [self.pinterestButton.layer setBorderColor:[[UIColor redColor] CGColor]];
-    [self.pinterestButton.layer setBorderWidth:2.0f];
-    [self.pinterestButton.layer setCornerRadius:8];
+    self.pinterestButton.layer.borderColor = [UIColor redColor].CGColor;
+    self.pinterestButton.layer.borderWidth = 2.0f;
+    self.pinterestButton.layer.cornerRadius = 8;
     //[self.pinterestButton setTitleColor:[UIColor blueColor] forState:UIControlStateNormal];
+    
+    //Ingredients View
+    self.ingredientsView.layer.borderColor = [UIColor blackColor].CGColor;
+    self.ingredientsView.layer.borderWidth = 2.0;
+    self.ingredientsView.layer.cornerRadius = 8;
+    self.ingredientsView.editable = NO;
 }
 
 - (void)viewDidLoad
@@ -70,7 +83,7 @@
     self.filterLabel.text = sharedManager.dishFilter;
     self.nameLabel.text   = sharedManager.selectedDish.name;
     self.typesLabel.text  = sharedManager.selectedDish.type;
-    //ingredients
+    self.ingredientsView.text = sharedManager.selectedDish.ingredients;
     
     [self setupLabelVisuals];
 }
@@ -81,15 +94,9 @@
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
+//- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+//{
+//    EditDishViewController *destination = [segue sourceViewController];
+//}
 
 @end

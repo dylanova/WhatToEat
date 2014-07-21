@@ -70,7 +70,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="3"/>
+            <point key="canvasLocation" x="-10" y="3"/>
         </scene>
         <!--Out Food Type View Controller - Eating Out-->
         <scene sceneID="lD4-co-vRw">
@@ -109,7 +109,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="prH-0v-pHw">
-                                <rect key="frame" x="0.0" y="64" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="52" width="320" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="2OP-q5-qcA" id="1W0-iv-BM7"/>
@@ -139,7 +139,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mqJ-qD-LKK" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="3"/>
+            <point key="canvasLocation" x="774" y="3"/>
         </scene>
         <!--Out Food Item View Controller - Restaurant-->
         <scene sceneID="xGb-Fd-JQi">
@@ -210,7 +210,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EXQ-Rd-B7b" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2768" y="3"/>
+            <point key="canvasLocation" x="2172" y="-417"/>
         </scene>
         <!--Out List Table View Controller - Eat Out List-->
         <scene sceneID="iDv-ZE-vtT">
@@ -264,7 +264,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLR-oB-tsR" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2240" y="875"/>
+            <point key="canvasLocation" x="1392" y="3"/>
         </scene>
         <!--Add Restaurant View Controller - Add Restaurant-->
         <scene sceneID="Ume-Dz-OEp">
@@ -323,7 +323,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TPK-lr-8iH" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ACO-rS-wMh" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="3310" y="875"/>
+            <point key="canvasLocation" x="2776" y="391"/>
         </scene>
         <!--In Food Type View Controller - Eating In-->
         <scene sceneID="J0c-Iv-H6Q">
@@ -362,7 +362,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5h5-yL-vuh">
-                                <rect key="frame" x="0.0" y="70" width="320" height="162"/>
+                                <rect key="frame" x="0.0" y="50" width="320" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <outlet property="dataSource" destination="Sk4-X1-NBz" id="uxg-7r-bPV"/>
@@ -392,7 +392,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OLP-n9-Ttw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="875"/>
+            <point key="canvasLocation" x="774" y="2027"/>
         </scene>
         <!--In List Table View Controller - Eat In List-->
         <scene sceneID="r15-J1-ohL">
@@ -446,7 +446,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gpc-mz-2gB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="774" y="1644"/>
+            <point key="canvasLocation" x="1392" y="2027"/>
         </scene>
         <!--Add Dish View Controller - Add Dish-->
         <scene sceneID="Pbt-kw-6qp">
@@ -498,7 +498,91 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ePJ-2f-zeB" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="sSI-fZ-DpF" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="1902" y="1644"/>
+            <point key="canvasLocation" x="2776" y="2628"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="dcc-hs-o3p">
+            <objects>
+                <navigationController definesPresentationContext="YES" id="MBJ-BY-m4U" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="kTI-jW-ocd">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e2J-cX-cr1" kind="relationship" relationship="rootViewController" id="xvC-y8-eSg"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DV5-es-5pe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2776" y="1615"/>
+        </scene>
+        <!--Edit Dish View Controller - Edit Dish-->
+        <scene sceneID="ffj-y6-5oj">
+            <objects>
+                <viewController id="e2J-cX-cr1" customClass="EditDishViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="691-Bf-Akt"/>
+                        <viewControllerLayoutGuide type="bottom" id="AFq-4K-1hW"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lgH-ed-cCj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Edit Dish Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yue-ck-sMX">
+                                <rect key="frame" x="20" y="269" width="280" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dKm-cJ-AtB">
+                                <rect key="frame" x="0.0" y="53" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="e2J-cX-cr1" id="gUV-az-qet"/>
+                                    <outlet property="delegate" destination="e2J-cX-cr1" id="8h1-aD-fg8"/>
+                                </connections>
+                            </pickerView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="W19-vX-umi">
+                                <rect key="frame" x="20" y="347" width="280" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ingredients:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yiP-mD-Hbd">
+                                <rect key="frame" x="20" y="318" width="90" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Edit Dish" id="xfP-tx-LHS">
+                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="cPa-li-k2i">
+                            <connections>
+                                <segue destination="G8Z-Km-exC" kind="unwind" unwindAction="unwindToDish:" id="X2s-7Q-be5"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="Trn-WF-m1b">
+                            <connections>
+                                <segue destination="G8Z-Km-exC" kind="unwind" unwindAction="unwindToDish:" id="FK7-vM-YaU"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="cancelButton" destination="cPa-li-k2i" id="a73-z9-C4A"/>
+                        <outlet property="dishName" destination="Yue-ck-sMX" id="BwL-Eb-7zK"/>
+                        <outlet property="doneButton" destination="Trn-WF-m1b" id="4GK-Zb-fQ8"/>
+                        <outlet property="ingredients" destination="W19-vX-umi" id="CTZ-tu-ISd"/>
+                        <outlet property="picker" destination="dKm-cJ-AtB" id="IY9-9I-RVP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gVs-ar-G4A" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="G8Z-Km-exC" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="3464" y="1615"/>
         </scene>
         <!--In Food Item View Controller - Dish-->
         <scene sceneID="J47-OO-JEg">
@@ -547,10 +631,6 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="n3a-2l-HNS">
-                                <rect key="frame" x="20" y="282" width="280" height="148"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
-                            </scrollView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="pinterest" translatesAutoresizingMaskIntoConstraints="NO" id="cRk-ST-9rY">
                                 <rect key="frame" x="60" y="461" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -567,12 +647,27 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FWS-zG-vJ1">
+                                <rect key="frame" x="20" y="282" width="280" height="150"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" title="Dish" id="5wS-9Z-2im"/>
+                    <navigationItem key="navigationItem" title="Dish" id="5wS-9Z-2im">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="edit" id="4ZI-UB-sJn">
+                            <connections>
+                                <segue destination="MBJ-BY-m4U" kind="modal" id="dzY-IW-bIO"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="filterLabel" destination="GkJ-zy-gV4" id="V3b-yr-K13"/>
+                        <outlet property="ingredientsView" destination="FWS-zG-vJ1" id="hsW-0g-PPy"/>
                         <outlet property="nameLabel" destination="pLx-G1-TTL" id="MHt-qj-LQn"/>
                         <outlet property="pinterestButton" destination="5za-ox-0uK" id="L81-Bh-QUg"/>
                         <outlet property="typesLabel" destination="Z5p-4g-TPx" id="2Tq-KP-B6n"/>
@@ -580,7 +675,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="uDR-2K-7VJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="875"/>
+            <point key="canvasLocation" x="2172" y="1615"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="L9A-uz-4Mp">
@@ -598,7 +693,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NQ5-wh-R8h" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="265" y="3"/>
+            <point key="canvasLocation" x="-647" y="3"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="AfL-hT-3cT">
@@ -616,7 +711,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9yt-Qt-Gyb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2768" y="875"/>
+            <point key="canvasLocation" x="2172" y="391"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KEb-Dv-B0P">
@@ -634,7 +729,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ed8-aj-Md4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1376" y="1644"/>
+            <point key="canvasLocation" x="2172" y="2628"/>
         </scene>
     </scenes>
     <resources>

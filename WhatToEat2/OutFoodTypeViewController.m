@@ -49,6 +49,9 @@
 {
     [super viewDidLoad];
     
+    UIImage *clouds = [UIImage imageNamed:@"Clouds"];
+    [self.navigationController.navigationBar setBackgroundImage:clouds forBarMetrics:UIBarMetricsDefault];
+    
     [self setupLabelVisuals];
 }
 

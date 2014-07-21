@@ -10,6 +10,8 @@
 
 @interface InFoodItemViewController : UIViewController
 
+- (IBAction)unwindToDish:(UIStoryboardSegue *)segue;
+
 - (IBAction) pinterestLink;
 
 - (void)setupLabelVisuals;

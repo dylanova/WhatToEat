@@ -10,6 +10,7 @@
 		3E5492E218EA5BBD00A285CF /* FoodTypes.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E5492E118EA5BBD00A285CF /* FoodTypes.m */; };
 		3E619E9218F3B2BA004CACCF /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E619E9118F3B2BA004CACCF /* MapKit.framework */; };
 		3E619E9518F3B4EA004CACCF /* Location.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E619E9418F3B4EA004CACCF /* Location.m */; };
+		3E73775C197C6E4F006956D8 /* EditDishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3E73775B197C6E4F006956D8 /* EditDishViewController.m */; };
 		3EA717A118E503E800E2BA7B /* OutListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A018E503E800E2BA7B /* OutListTableViewController.m */; };
 		3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A318E5049D00E2BA7B /* OutFoodItemViewController.m */; };
 		3EA717A718E5097C00E2BA7B /* AddRestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3EA717A618E5097C00E2BA7B /* AddRestaurantViewController.m */; };
@@ -56,6 +57,8 @@
 		3E619E9118F3B2BA004CACCF /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		3E619E9318F3B4EA004CACCF /* Location.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Location.h; sourceTree = "<group>"; };
 		3E619E9418F3B4EA004CACCF /* Location.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Location.m; sourceTree = "<group>"; };
+		3E73775A197C6E4F006956D8 /* EditDishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EditDishViewController.h; sourceTree = "<group>"; };
+		3E73775B197C6E4F006956D8 /* EditDishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EditDishViewController.m; sourceTree = "<group>"; };
 		3EA7179F18E503E800E2BA7B /* OutListTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutListTableViewController.h; sourceTree = "<group>"; };
 		3EA717A018E503E800E2BA7B /* OutListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OutListTableViewController.m; sourceTree = "<group>"; };
 		3EA717A218E5049D00E2BA7B /* OutFoodItemViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OutFoodItemViewController.h; sourceTree = "<group>"; };
@@ -198,6 +201,8 @@
 				3E619E9418F3B4EA004CACCF /* Location.m */,
 				3EBD1F6B18E74512005ABC8C /* SharedManager.m */,
 				3ED7187618DA8E2500EA58B2 /* InFoodItemViewController.h */,
+				3E73775A197C6E4F006956D8 /* EditDishViewController.h */,
+				3E73775B197C6E4F006956D8 /* EditDishViewController.m */,
 				3ED7187718DA8E2500EA58B2 /* InFoodItemViewController.m */,
 				3ED7187918DA8E8000EA58B2 /* InListTableViewController.h */,
 				3ED7187A18DA8E8000EA58B2 /* InListTableViewController.m */,
@@ -338,6 +343,7 @@
 				3E5492E218EA5BBD00A285CF /* FoodTypes.m in Sources */,
 				3EA717A418E5049D00E2BA7B /* OutFoodItemViewController.m in Sources */,
 				3EE58E4818E79C6800843062 /* Dish.m in Sources */,
+				3E73775C197C6E4F006956D8 /* EditDishViewController.m in Sources */,
 				3EF6F26F18DA88A7007BC0C9 /* InOrOutViewController.m in Sources */,
 				3EF6F24618DA87A2007BC0C9 /* AppDelegate.m in Sources */,
 				3EF6F27518DA8A59007BC0C9 /* OutFoodTypeViewController.m in Sources */,

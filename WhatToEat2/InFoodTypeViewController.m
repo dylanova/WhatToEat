@@ -49,6 +49,9 @@
 {
     [super viewDidLoad];
     
+    UIImage *board = [UIImage imageNamed:@"cutting_board"];
+    [self.navigationController.navigationBar setBackgroundImage:board forBarMetrics:UIBarMetricsDefault];
+    
     [self setupLabelVisuals];
 }
 
